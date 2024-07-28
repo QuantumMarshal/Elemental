@@ -1,3 +1,4 @@
+using GameBase.Enums;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,9 +23,15 @@ public class PlayerConfig : ScriptableObject
     [Header("HEALTH")]
     public int health;
 
+    [Header("SKILL")]
+    [SerializeField] private List<Skill> permanentSkills;
+    public Skill skill;
+
+    public PlayerConfig() { }
+
     public PlayerConfig CopyConfig()
     {
-        PlayerConfig copy = new PlayerConfig();
+        PlayerConfig copy = CreateInstance<PlayerConfig>();
         copy.moveSpeed = moveSpeed;
         copy.dashSpeed = dashSpeed;
         copy.dashCooldown = dashCooldown;

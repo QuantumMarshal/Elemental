@@ -13,8 +13,10 @@ public class PlayerAnimatorController : MonoBehaviour
     private const string STATE_MOVE = "MOVE";
     private const string STATE_DASH = "DASH";
     private const string STATE_ATTACK1 = "ATTACK";
-    //private const string STATE_ATTACK2 = "Attack2";
+    private const string STATE_ATTACK2 = "ATTACK_2";
     //private const string STATE_ATTACK3 = "Attack3";
+
+    public bool isDashAnimFinish = true;
 
     private void Awake()
     {
@@ -23,6 +25,7 @@ public class PlayerAnimatorController : MonoBehaviour
 
     public void SetIdle(float LastXInput, float LastYInput)
     {
+        // Debug.Log("Setting Idle State");
         ChangeState(STATE_IDLE);
         animator.SetFloat("LastXInput", LastXInput);
         animator.SetFloat("LastYInput", LastYInput);
@@ -30,6 +33,7 @@ public class PlayerAnimatorController : MonoBehaviour
 
     public void SetMove(float XInput, float YInput)
     {
+        // Debug.Log("Setting Move State");
         ChangeState(STATE_MOVE);
         animator.SetFloat("XInput", XInput);
         animator.SetFloat("YInput", YInput);
@@ -37,9 +41,19 @@ public class PlayerAnimatorController : MonoBehaviour
 
     public void SetDash(float LastXInput, float LastYInput)
     {
-        ChangeState(STATE_DASH);
+        // Debug.Log("Setting Dash State");
         animator.SetFloat("LastXInput", LastXInput);
         animator.SetFloat("LastYInput", LastYInput);
+        ChangeState(STATE_DASH);
+    }
+
+    private void ChangeState(string newState)
+    {
+        if (currentState == newState) return;
+
+        // Debug.Log($"Changing state from {currentState} to {newState}");
+        animator.Play(newState);
+        currentState = newState;
     }
 
     public void SetAttack(int attackNumber, float LastXInput, float LastYInput)
@@ -49,32 +63,29 @@ public class PlayerAnimatorController : MonoBehaviour
             case 1:
                 ChangeState(STATE_ATTACK1);
                 break;
-            //case 2:
-            //    ChangeState(STATE_ATTACK2);
-            //    break;
+            case 2:
+                ChangeState(STATE_ATTACK2);
+                break;
             //case 3:
             //    ChangeState(STATE_ATTACK3);
             //    break;
             default:
                 ChangeState(STATE_IDLE);
-                break;
+                break; 
         }
 
         animator.SetFloat("LastXInput", LastXInput);
         animator.SetFloat("LastYInput", LastYInput);
     }
 
-    private void ChangeState(string newState)
-    {
-        if (currentState == newState) return;
-
-        animator.Play(newState);
-        currentState = newState;
-    }
-
     public float GetCurrentAnimationLength()
     {
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         return stateInfo.length;
+    }
+
+    public string GetState()
+    {
+        return currentState;
     }
 }
