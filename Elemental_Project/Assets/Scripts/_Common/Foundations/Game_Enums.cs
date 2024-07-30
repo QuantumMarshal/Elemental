@@ -44,10 +44,13 @@ namespace GameBase.Enums
     }
 
     // ------------------------------------------------------------------------------
-    // Player Animation Finite State Machine
-    public enum PlayerFSM
+    // Player Skill 
+    public enum Skill
     {
-        IDLE = 0,
-        DASH = 1,
+        NORMAL,
+        FIRE,
+        WATER,
+        EARTH,
+        LIGHTNING
     }
 }
