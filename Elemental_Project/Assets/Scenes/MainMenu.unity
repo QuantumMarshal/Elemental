@@ -310,7 +310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &580274067
 RectTransform:
   m_ObjectHideFlags: 0
@@ -326,9 +326,9 @@ RectTransform:
   - {fileID: 1736705219}
   m_Father: {fileID: 1678535695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -40}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &580274068
@@ -431,7 +431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &602529446
 RectTransform:
   m_ObjectHideFlags: 0
@@ -447,9 +447,9 @@ RectTransform:
   - {fileID: 782558168}
   m_Father: {fileID: 1678535695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -40}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &602529447
@@ -828,6 +828,38 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2467168654942753506, guid: 004db97a4775e674b80c2521610534ba, type: 3}
+      propertyPath: sfxPrefab
+      value: 
+      objectReference: {fileID: 2175303198151193849, guid: 94fa5f925072f234b890539633dace2b, type: 3}
+    - target: {fileID: 2467168654942753506, guid: 004db97a4775e674b80c2521610534ba, type: 3}
+      propertyPath: sfxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2467168654942753506, guid: 004db97a4775e674b80c2521610534ba, type: 3}
+      propertyPath: musicVolume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2467168654942753506, guid: 004db97a4775e674b80c2521610534ba, type: 3}
+      propertyPath: currentMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 4ad4b2f79c990a44491a73419100832b, type: 2}
+    - target: {fileID: 2467168654942753506, guid: 004db97a4775e674b80c2521610534ba, type: 3}
+      propertyPath: SFX_MixerGroup
+      value: 
+      objectReference: {fileID: 243859828884416902, guid: 4ad4b2f79c990a44491a73419100832b, type: 2}
+    - target: {fileID: 2467168654942753506, guid: 004db97a4775e674b80c2521610534ba, type: 3}
+      propertyPath: soundMapConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 96b1bb17baf6d6a4a8fd895bfb39d11e, type: 2}
+    - target: {fileID: 2467168654942753506, guid: 004db97a4775e674b80c2521610534ba, type: 3}
+      propertyPath: Music_MixerGroup
+      value: 
+      objectReference: {fileID: 243261478563552786, guid: 4ad4b2f79c990a44491a73419100832b, type: 2}
+    - target: {fileID: 2467168654942753506, guid: 004db97a4775e674b80c2521610534ba, type: 3}
+      propertyPath: numberOfDefaultSFX
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5059427265684938365, guid: 004db97a4775e674b80c2521610534ba, type: 3}
       propertyPath: m_SizeDelta.x
       value: 347.8517
@@ -849,6 +881,10 @@ PrefabInstance:
       value: Game_Manager
       objectReference: {fileID: 0}
     - target: {fileID: 5072987304614613658, guid: 004db97a4775e674b80c2521610534ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444761445781165088, guid: 004db97a4775e674b80c2521610534ba, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -1229,7 +1265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1409821651
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1245,9 +1281,9 @@ RectTransform:
   - {fileID: 1155695149}
   m_Father: {fileID: 1678535695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -40}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1409821652
@@ -1575,6 +1611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c0427804ed0d94388f721368331cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  title: {fileID: 1196753565}
   startBtn: {fileID: 1409821652}
   settingBtn: {fileID: 602529447}
   exitBtn: {fileID: 580274068}

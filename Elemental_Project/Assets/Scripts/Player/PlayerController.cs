@@ -5,11 +5,12 @@ using UnityEngine.InputSystem;
 using NaughtyAttributes;
 using DG.Tweening;
 using GameBase;
+using GameBase.Managers;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerConfig playerConfig;
-    [SerializeField] private PlayerConfig config;
+    public PlayerConfig config;
 
     [Header("MOVEMENT")]
     [SerializeField] private Vector2 moveInput;
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerAnimatorController animator;
 
     private Rigidbody2D rb;
-    private PlayerInputAction PlayerInputAction;
+    public PlayerInputAction PlayerInputAction;
 
     private static PlayerController instance;
 
@@ -76,6 +77,11 @@ public class PlayerController : MonoBehaviour
         attackDuration = config.attackDuration;
         hurtDuration = config.hurtDuration;
         health = config.health;
+    }
+
+    private void OnDestroy()
+    {
+        ResetComponent();
     }
 
     private void ResetComponent()
@@ -131,6 +137,7 @@ public class PlayerController : MonoBehaviour
     private void Dash(InputAction.CallbackContext context)
     {
         StartCoroutine(Cor_Dash());
+        Game_SoundManager.Instance.PlaySound(GameBase.AudioPlayer.SoundID.SFX_DASH);
     }
 
     private void Attack(InputAction.CallbackContext context)
@@ -140,6 +147,7 @@ public class PlayerController : MonoBehaviour
         if (canAttack)
         {
             PerformComboAttack();
+            Game_SoundManager.Instance.PlaySound(GameBase.AudioPlayer.SoundID.SFX_ATTACK, Random.Range(0.3f, 1f));
         }
     }
 

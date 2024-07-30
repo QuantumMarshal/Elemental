@@ -35,10 +35,11 @@ MonoBehaviour:
       elementIcon: {fileID: 0}
     reqReferences: {fileID: 0}
     isExpanded: 1
-    _keyValues: 19fcffff000000000100000064000000
-    _keys: 19fcffff000000000100000064000000
+    _keyValues: 19fcffff000000000100000064000000c8000000
+    _keys: 19fcffff000000000100000064000000c8000000
     _values:
     - Unknown
     - MainMenu
     - Level
-    - MainMenu
+    - Level
+    - Boss

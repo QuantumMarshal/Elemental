@@ -16,16 +16,13 @@ namespace GameBase.AudioPlayer
         MUSIC_MAIN_MENU,
 
         _____GAMEPLAY______ = 150, //ko goi cai nay
-        GAMEPLAY_1,
-        GAMEPLAY_2,
-        GAMEPLAY_3,
-        GAMEPLAY_4,
+        GAMEPLAY,
+        BOSS,
 
         //SOUND EFFECT
         _____GAMEPLAY________ = 400, //ko goi cai nay
-        SFX_DISAPPEAR,
-        SFX_WIN,
-        SFX_LOSE,
+        SFX_ATTACK,
+        SFX_DASH,
 
         _____UI_____________ = 500, //ko goi cai nay
         SFX_BUTTON_CLICK,

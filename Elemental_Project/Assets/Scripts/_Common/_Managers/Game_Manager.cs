@@ -127,8 +127,8 @@ namespace GameBase.Managers
         public void LoadSceneManually(SceneType sceneType, TransitionType transitionType, SoundType soundType = SoundType.NONE, System.Action cb = null, bool isStopAllMusicPlaying = false)
         {
             isLoadSceneComplete = false;
-            //if (isStopAllMusicPlaying || soundType != SoundType.NONE) 
-            if (isStopAllMusicPlaying && soundType != SoundType.NONE)
+            if (isStopAllMusicPlaying || soundType != SoundType.NONE)
+                if (isStopAllMusicPlaying && soundType != SoundType.NONE)
                 Game_SoundManager.Instance.StopAllMusicPlaying();
             LoadSceneWithTransition(sceneType, true, transitionType, soundType, cb);
         }

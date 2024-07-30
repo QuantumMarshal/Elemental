@@ -17,6 +17,7 @@ namespace GameBase.Enums
         MAINMENU = 0,
         LOBBY = 1,
         LEVEL = 100,
+        BOSS = 200,
     }
 
     // DO NOT DELETE THIS ENUM

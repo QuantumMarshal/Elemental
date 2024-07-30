@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af525058d605dd4a85ce4cecadd7a24, type: 3}
+  m_Name: Sound Effect Sound Map
+  m_EditorClassIdentifier: 
+  soundType: 0
+  path: SoundData/Sound Effect
+  SoundMappingList:
+  - name: SFX_ATTACK
+    Id: 401
+    Data: {fileID: 11400000, guid: e2fd1eddd93ecc34b97be2665cf8361c, type: 2}
+  - name: SFX_DASH
+    Id: 402
+    Data: {fileID: 11400000, guid: 4086c0853cef93b4ba0dbced86e7cbc1, type: 2}

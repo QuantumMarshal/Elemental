@@ -19,5 +19,6 @@ MonoBehaviour:
   attackDuration: 0.3
   hurtDuration: 0.3
   health: 100
+  maxHealth: 100
   permanentSkills: 00000000
   skill: 0

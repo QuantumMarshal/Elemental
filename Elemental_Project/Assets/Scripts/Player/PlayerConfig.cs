@@ -22,6 +22,7 @@ public class PlayerConfig : ScriptableObject
 
     [Header("HEALTH")]
     public int health;
+    public int maxHealth;
 
     [Header("SKILL")]
     [SerializeField] private List<Skill> permanentSkills;
@@ -39,6 +40,7 @@ public class PlayerConfig : ScriptableObject
         copy.attackDuration = attackDuration;   
         copy.hurtDuration = hurtDuration;
         copy.health = health;
+        copy.maxHealth = maxHealth;
         return copy;
     }
 }
