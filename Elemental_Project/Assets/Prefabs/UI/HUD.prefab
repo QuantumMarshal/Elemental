@@ -651,8 +651,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 1565, y: 40}
-  m_SizeDelta: {x: -1900, y: 100}
+  m_AnchoredPosition: {x: 1851, y: 40}
+  m_SizeDelta: {x: -1856, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &5362029802683653158
 MonoBehaviour:
@@ -671,8 +671,8 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 64.67
+  m_ChildAlignment: 8
+  m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -962,6 +962,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Healthbar: {fileID: 6304346059148186208}
+  skill: {fileID: 0}
+  dash: {fileID: 0}
 --- !u!1 &6275608509089839669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,7 +1151,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 120, y: 120}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!1 &8588284775543249784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,7 +1188,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 120, y: 120}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!1 &8625770141467660748
 GameObject:
   m_ObjectHideFlags: 0
